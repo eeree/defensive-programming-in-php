@@ -6,7 +6,7 @@ class BetterExample
 
     public function setUpdatedAt(\DateTimeImmutable $dateTime)
     {
-        $this->updatedAt = clone $dateTime;
+        $this->updatedAt = $dateTime;
     }
 }
 
