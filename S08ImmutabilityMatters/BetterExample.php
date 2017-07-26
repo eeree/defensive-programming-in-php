@@ -1,14 +1,14 @@
 <?php
 
-class BetterExample
-{
-    private $updatedAt;
-
-    public function setUpdatedAt(\DateTimeImmutable $dateTime)
+    class BetterExample
     {
-        $this->updatedAt = $dateTime;
+        private $updatedAt;
+
+        public function setUpdatedAt(\DateTimeImmutable $dateTime)
+        {
+            $this->updatedAt = $dateTime;
+        }
     }
-}
 
 $currentDateTime = new \DateTimeImmutable();
 $example = new BetterExample();
