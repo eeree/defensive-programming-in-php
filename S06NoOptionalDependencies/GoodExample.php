@@ -23,3 +23,6 @@ class GoodExample
 
 $renamer = new BadExample($marvelHeroRepository, $filesystemLogger);
 $renamer->renameHero('Hulk', 'Hulk Hogan');
+
+$renamer = new BadExample($marvelHeroRepository, new NullLogger());
+$renamer->renameHero('Hulk', 'Hulk Hogan');

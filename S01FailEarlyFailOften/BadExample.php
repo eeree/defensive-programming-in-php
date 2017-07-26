@@ -13,17 +13,15 @@ function charsRemover(string $inputText, array $charsToRemove, int $length) :str
     return $inputText;
 }
 
-
-    class CharsRemoverTest extends TestCase
+class CharsRemoverTest extends TestCase
+{
+    public function testSuccessfulScenarioNoInput()
     {
-        public function testSuccessfulScenarioNoInput()
-        {
-            $this->assertEqual('', charsRemover('', [], 0));
-        }
-
-        public function testSuccessfulScenarioLongInput()
-        {
-            $this->assertEqual('foo', charsRemover('foo', ['b', 'a', 'r'], 0));
-        }
+        $this->assertEqual('', charsRemover('', [], 0));
     }
 
+    public function testSuccessfulScenarioLongInput()
+    {
+        $this->assertEqual('foo', charsRemover('foo', ['b', 'a', 'r'], 0));
+    }
+}
